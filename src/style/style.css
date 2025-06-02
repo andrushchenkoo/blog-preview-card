@@ -1,0 +1,123 @@
+@import url("/src/style/reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --text-dark: hsl(0, 0%, 7%);
+  --text-light: hsl(0, 0%, 42%);
+  --bg-card: hsl(0, 0%, 100%);
+  --bg-body: hsl(47, 88%, 63%);
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-body);
+}
+.card {
+  width: 327px;
+  height: 500px;
+  padding: 24px;
+  border: 2px solid var(--text-dark);
+  border-radius: 20px;
+  background-color: var(--bg-card);
+  box-shadow: 8px 8px 1px 1px var(--text-dark);
+}
+.card__image {
+  width: 100%;
+  height: 200px;
+  background-image: url("/assets/images/illustration-article.svg");
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.card__tag {
+  display: inline-block;
+  padding-inline: 12px;
+  text-align: center;
+  line-height: 26px;
+  font-weight: 800;
+  width: 73px;
+  height: 26px;
+  background-color: var(--bg-body);
+  border-radius: 4px;
+}
+.card__date {
+  font-weight: 500;
+  line-height: 18px;
+}
+.card__link {
+  text-decoration: none;
+}
+.card__link:hover .card__title {
+  color: var(--bg-body);
+  cursor: pointer;
+}
+.card__link:focus .card__title {
+  color: var(--bg-body);
+}
+.card__title {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 30px;
+  color: var(--text-dark);
+  transition: color 0.2s linear;
+}
+
+.card__description {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 18px;
+}
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.card__author-avatar {
+  width: 32px;
+  height: 32px;
+}
+.card__author-name {
+  font-style: 14px;
+  font-weight: 800;
+}
+@media (min-width: 1440px) {
+  body {
+    font-size: 14px;
+  }
+  .card {
+    width: 384px;
+    height: 522px;
+  }
+  .card__tag {
+    width: 82px;
+    height: 29px;
+  }
+  .card__date {
+    line-height: 21px;
+  }
+  .card__title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .card__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
